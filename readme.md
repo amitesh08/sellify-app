@@ -12,3 +12,6 @@
 
    cd ../backend
    npm install
+
+   root Directory
+   npm i express pg 

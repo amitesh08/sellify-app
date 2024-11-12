@@ -1,13 +1,15 @@
 // const express = require('express');
 import express from 'express';
 import { connectDB } from './config/db.js';
+import productRoutes from './routes/productRoute.js'
 
 
 const app = express();
 
-app.get("/products",(req,res)=>{
-    res.send("hi there server is up!");
-})
+app.use(express.json());
+
+app.use("/api/products", productRoutes);
+
 
 app.listen(3000,()=>{
     connectDB();
