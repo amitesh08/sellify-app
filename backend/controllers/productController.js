@@ -90,7 +90,7 @@ export async function deleteProduct(req, res){
         }
         res.status(200).json({
             success: true,
-            message: `product id = ${id} has been deleted successfully`
+            message: `product deleted`
         })
     } catch (error) {
         console.error("error deleting product", error);
